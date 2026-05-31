@@ -1,6 +1,6 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/$1" }
+  "redirects": [
+    { "source": "/", "destination": "/work.html", "permanent": false }
   ],
   "headers": [
     {
