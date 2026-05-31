@@ -199,6 +199,8 @@ a {
 .nav .logo {
   font-size: 18px;
   font-weight: 600;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-links {
