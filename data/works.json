@@ -1,0 +1,128 @@
+[
+  {
+    "id": "qianxin-qaxgpt-experience",
+    "title": "QAXGPT Experience",
+    "cover": "./assets/creativework/cw-01.png",
+    "coverType": "image",
+    "time": "2024-2025",
+    "type": "Website",
+    "ratio": "size-large",
+    "span": 2,
+    "sortOrder": 1,
+    "detail": {
+      "category": "Creative",
+      "date": "May, 2025",
+      "intro": "",
+      "role": "",
+      "content": []
+    }
+  },
+  {
+    "id": "qax-design-system",
+    "title": "Test",
+    "cover": "./assets/QAX Design System.png",
+    "coverType": "image",
+    "time": "2023-2024",
+    "type": "Design System",
+    "ratio": "size-tiny",
+    "span": 2,
+    "sortOrder": 2,
+    "detail": {
+      "category": "Creative",
+      "date": "May, 2025",
+      "intro": "",
+      "role": "",
+      "content": []
+    }
+  },
+  {
+    "id": "qax-new-style",
+    "title": "QAX New Style",
+    "cover": "./assets/QAX New Style.png",
+    "coverType": "image",
+    "time": "2024-2025",
+    "type": "Website, APP, Product, Digital Experience",
+    "ratio": "size-wide",
+    "span": 2,
+    "sortOrder": 3,
+    "detail": {
+      "category": "Creative",
+      "date": "May, 2025",
+      "intro": "",
+      "role": "",
+      "content": []
+    }
+  },
+  {
+    "id": "qaxgpt-brand-design",
+    "title": "Qax-gpt Brand Design",
+    "cover": "./assets/Qax-gpt Brand Design.png",
+    "coverType": "image",
+    "time": "2024-2025",
+    "type": "Website, APP, Product, Digital Experience",
+    "ratio": "size-small",
+    "span": 1,
+    "sortOrder": 4,
+    "detail": {
+      "category": "Creative",
+      "date": "May, 2025",
+      "intro": "",
+      "role": "",
+      "content": []
+    }
+  },
+  {
+    "id": "qax-ai-motion-design",
+    "title": "Qax-AI Motion Design",
+    "cover": "./assets/Qax-AI Motion Design.png",
+    "coverType": "image",
+    "time": "2025",
+    "type": "Website, APP, Product, Digital Experience",
+    "ratio": "size-small",
+    "span": 1,
+    "sortOrder": 5,
+    "detail": {
+      "category": "Creative",
+      "date": "May, 2025",
+      "intro": "",
+      "role": "",
+      "content": []
+    }
+  },
+  {
+    "id": "qax-ai-guidline",
+    "title": "QAX-AI Guidline",
+    "cover": "./assets/QAX-AI Guidline.png",
+    "coverType": "image",
+    "time": "2024-2025",
+    "type": "Website, APP, Product, Digital Experience",
+    "ratio": "size-tiny",
+    "span": 1,
+    "sortOrder": 6,
+    "detail": {
+      "category": "Creative",
+      "date": "May, 2025",
+      "intro": "",
+      "role": "",
+      "content": []
+    }
+  },
+  {
+    "id": "qax-dashboard-discovery",
+    "title": "QAX Dashboard Discovery",
+    "cover": "./assets/QAX Dashboard Discovery.png",
+    "coverType": "image",
+    "time": "2024-2025",
+    "type": "Website, APP, Product, Digital Experience",
+    "ratio": "size-910x672",
+    "span": 2,
+    "sortOrder": 7,
+    "detail": {
+      "category": "Creative",
+      "date": "May, 2025",
+      "intro": "",
+      "role": "",
+      "content": []
+    }
+  }
+]

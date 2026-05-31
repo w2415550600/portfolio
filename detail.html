@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Detail - Jianyu Wang</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* 详情页加载状态 */
+    .detail-loading {
+      text-align: center;
+      padding: 120px 0;
+      color: #999;
+      font-size: 16px;
+    }
+    .detail-not-found {
+      text-align: center;
+      padding: 120px 0;
+      color: #666;
+      font-size: 18px;
+    }
+    .detail-not-found a {
+      color: #000;
+      text-decoration: underline;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #666;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body class="page-detail">
+  <!-- Navigation -->
+  <nav class="nav container">
+    <div class="logo">Jianyu Wang</div>
+    <div class="nav-links">
+      <a href="work.html">Work</a>
+      <a href="playground.html">Sandbox</a>
+      <a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf" class="resume-btn">Resume ↓</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- 返回链接 -->
+    <div style="padding-top: 20px;">
+      <a href="work.html" class="back-link">← 返回作品列表</a>
+    </div>
+
+    <div id="detail-content">
+      <div class="detail-loading">加载中...</div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-top">
+        <div>
+          <strong>Contact</strong>
+          <a href="mailto:w2415550600@gmail.com">w2415550600@gmail.com</a>
+        </div>
+        <div>
+          <strong>Location</strong>
+          <span>Chengdu</span>
+        </div>
+        <div>
+          <strong>Resume</strong>
+          <a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf">Jianyu Wang ↓</a>
+        </div>
+        <div>
+          <strong>Socials</strong>
+          <a href="#">Zcool</a>
+          <a href="#">Dribbble</a>
+          <a href="#">Behance</a>
+        </div>
+      </div>
+      <div class="footer-giant">
+        <div><a href="work.html" class="footer-link"><span class="text-inner">Work.</span></a></div>
+        <div><a href="playground.html" class="footer-link"><span class="text-inner">Sandbox.</span></a></div>
+        <div><a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf" class="footer-link"><span class="text-inner">Resume.</span></a></div>
+        <div><a href="about.html" class="footer-link"><span class="text-inner">About.</span></a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script>
+  (async function() {
+    // 从URL获取作品ID：detail.html?id=xxx
+    const params = new URLSearchParams(window.location.search);
+    const workId = params.get('id');
+
+    if (!workId) {
+      document.getElementById('detail-content').innerHTML =
+        '<div class="detail-not-found">未指定作品ID，<a href="work.html">返回作品列表</a></div>';
+      return;
+    }
+
+    try {
+      const res = await fetch('./data/works.json');
+      const works = await res.json();
+      const work = works.find(w => w.id === workId);
+
+      if (!work) {
+        document.getElementById('detail-content').innerHTML =
+          '<div class="detail-not-found">作品不存在，<a href="work.html">返回作品列表</a></div>';
+        return;
+      }
+
+      // 更新页面标题
+      document.title = (work.title || 'Work Detail') + ' - Jianyu Wang';
+
+      const detail = work.detail || {};
+      const content = detail.content || [];
+
+      // 构建详情页HTML
+      let html = '';
+
+      // Basic Information
+      html += `
+        <section class="basic-information">
+          <div class="basic-info-divider"></div>
+          <div class="basic-info-content">
+            <div class="basic-info-left">
+              <span class="info-label">${detail.category || 'Creative'}</span>&nbsp;&nbsp;&nbsp;<span class="info-value">${detail.date || ''}</span>
+            </div>
+            <div class="basic-info-right">
+              <div class="info-introduce">
+                <h2 class="introduce-title">${work.title || ''}</h2>
+                ${detail.intro ? `<p class="introduce-desc">${detail.intro}</p>` : ''}
+              </div>
+              ${detail.role ? `
+              <div class="info-role">
+                <h3 class="role-title">Role</h3>
+                <p class="role-desc">${detail.role}</p>
+              </div>` : ''}
+            </div>
+          </div>
+        </section>`;
+
+      // Work Detail Content
+      if (content.length > 0) {
+        html += '<section class="work-detail">';
+        content.forEach(item => {
+          if (item.type === 'video') {
+            html += `
+              <div class="detail-img-wrapper">
+                <video src="${item.src}" controls playsinline style="width:100%;"></video>
+              </div>`;
+          } else {
+            html += `
+              <div class="detail-img-wrapper">
+                <img src="${item.src}" alt="${work.title || ''}">
+              </div>`;
+          }
+        });
+        html += '</section>';
+      } else {
+        // 无详情内容时显示封面
+        if (work.cover) {
+          html += `
+            <section class="work-detail">
+              <div class="detail-img-wrapper">
+                ${work.coverType === 'video'
+                  ? `<video src="${work.cover}" muted playsinline style="width:100%;"></video>`
+                  : `<img src="${work.cover}" alt="${work.title || ''}">`}
+              </div>
+            </section>`;
+        }
+      }
+
+      document.getElementById('detail-content').innerHTML = html;
+
+      // 触发GSAP动画
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+        // 基础信息区动画
+        gsap.from('.basic-info-content', {
+          y: 40, opacity: 0, duration: 0.8, ease: 'power2.out'
+        });
+        // 详情图片动画
+        gsap.utils.toArray('.detail-img-wrapper').forEach((el, i) => {
+          gsap.from(el, {
+            y: 60, opacity: 0, duration: 0.8, delay: i * 0.15, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 85%' }
+          });
+        });
+      }
+    } catch (e) {
+      console.error('加载作品详情失败:', e);
+      document.getElementById('detail-content').innerHTML =
+        '<div class="detail-not-found">加载失败，<a href="work.html">返回作品列表</a></div>';
+    }
+  })();
+  </script>
+  <script src="./main.js"></script>
+</body>
+
+</html>

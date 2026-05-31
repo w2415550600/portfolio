@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "alt": "AI Guidline Design System",
+    "src": "./assets/creativework/cw-01.png",
+    "aspectRatio": "221/165"
+  },
+  {
+    "id": 2,
+    "alt": "E2 LinkedMall",
+    "src": "./assets/creativework/cw-02.png",
+    "aspectRatio": "221/123"
+  },
+  {
+    "id": 3,
+    "alt": "LAMBOSS Brand Design",
+    "src": "./assets/creativework/cw-03.png",
+    "aspectRatio": "221/166"
+  },
+  {
+    "id": 4,
+    "alt": "画板",
+    "src": "./assets/creativework/cw-04.png",
+    "aspectRatio": "221/264"
+  },
+  {
+    "id": 5,
+    "alt": "Hi!",
+    "src": "./assets/creativework/cw-05.png",
+    "aspectRatio": "221/138"
+  },
+  {
+    "id": 6,
+    "alt": "画板备份",
+    "src": "./assets/creativework/cw-06.png",
+    "aspectRatio": "221/281"
+  },
+  {
+    "id": 7,
+    "alt": "Subtle and Pervasive",
+    "src": "./assets/creativework/cw-07.png",
+    "aspectRatio": "221/240"
+  },
+  {
+    "id": 8,
+    "alt": "Earth 3D Icon",
+    "src": "./assets/creativework/cw-08.png",
+    "aspectRatio": "221/167"
+  },
+  {
+    "id": 9,
+    "alt": "BackRoom SCP Story",
+    "src": "./assets/creativework/cw-09.png",
+    "aspectRatio": "221/166"
+  },
+  {
+    "id": 10,
+    "alt": "Monmonkey IP Design",
+    "src": "./assets/creativework/cw-10.png",
+    "aspectRatio": "221/166"
+  },
+  {
+    "id": 11,
+    "alt": "Shopify Editions",
+    "src": "./assets/creativework/cw-11.png",
+    "aspectRatio": "221/174"
+  },
+  {
+    "id": 12,
+    "alt": "Abstract Design",
+    "src": "./assets/creativework/cw-12.png",
+    "aspectRatio": "221/296"
+  },
+  {
+    "id": 13,
+    "alt": "Vitasilix 胶囊胃镜",
+    "src": "./assets/creativework/cw-13.png",
+    "aspectRatio": "221/328"
+  },
+  {
+    "id": 14,
+    "alt": "Microsoft Office Hub",
+    "src": "./assets/creativework/cw-14.png",
+    "aspectRatio": "221/221"
+  },
+  {
+    "id": 15,
+    "alt": "Flowbite AI Builder",
+    "src": "./assets/creativework/cw-15.png",
+    "aspectRatio": "221/166"
+  },
+  {
+    "id": 16,
+    "alt": "阿里雲",
+    "src": "./assets/creativework/cw-16.png",
+    "aspectRatio": "221/111"
+  }
+]

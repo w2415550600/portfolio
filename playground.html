@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sandbox - 王建宇作品集</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./lib/ring-carousel/ring-carousel.css?v=2" />
+</head>
+<body class="page-playground">
+  <nav class="nav container">
+    <div class="logo">Jianyu Wang</div>
+    <div class="nav-links">
+      <a href="work.html">Work</a>
+      <a href="playground.html">Sandbox</a>
+      <a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf" class="resume-btn">Resume ↓</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container"><div class="pg-divider"></div></div>
+    <section class="playground-hero container">
+  <div class="pg-basic-info g-fade-up">
+        <p class="pg-meta">2021- 2026</p>
+        <div class="pg-introduce">
+          <h2 class="pg-title">Sandbox</h2>
+          <p class="pg-desc">这是我的创意培养皿。在这个不受限的空间里，我通过 3D 渲染、动态图形和字体实验，不断挑战自我审美定义的舒适区。这里是逻辑的边界，也是创意的原点。在正式的命题作文之外，我将此地视为精神的“避难所”与“试验台”。这里不设终点，不问结果，仅记录关于光影、构图、动态与新兴媒介的即兴碰撞。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="playground-stage">
+        <div id="ring-container"></div>
+    </section>
+
+    <!-- Creative Work Grid Section -->
+    <section class="creative-work container">
+      <div class="cw-header g-fade-up">
+        <h2 class="cw-title">Creative Work<br>2021-2026</h2>
+      </div>
+      <div class="cw-grid g-fade-up" id="sandbox-grid">
+        <!-- 由sandbox.json动态渲染 -->
+      </div>
+    </section>
+
+    <!-- Bottom Text Section -->
+    <section class="cw-bottom container g-fade-up">
+      <div class="cw-bottom-row">
+        <div class="cw-bottom-label">关于项目</div>
+        <div class="cw-bottom-text">2019 年从实习开始入行，这里记载了我零散的设计片段或昙花一现的设计灵感，这些设计并非全部落地，但却给合作方和其它人带来了启发意义，你也可以在 Dribbble 上访问它们。</div>
+      </div>
+      <div class="cw-bottom-row">
+        <div class="cw-bottom-label">关于我</div>
+        <div class="cw-bottom-cols">
+          <p>我的工作始终围绕着体验与交互、视觉与动效的交集展开。我习惯与品牌、代理商和开发者并肩作战，我更倾向于和那些专业，富有热情，且有同理心的人合作。现在在学习 Vibe coding。我目前居住在成都，时间上领先伦敦 7 小时，比纽约快 12 小时。</p>
+          <p>工作之外，我是喜欢沉浸在 B 级片与硬核科幻与 Cult 电影。当我不去纠结像素与系统逻辑时，我有时会拿起吉他，在琴弦上消磨时间。</p>
+        </div>
+      </div>
+      <div class="cw-bottom-row">
+        <div class="cw-bottom-label">演讲与写作</div>
+        <div class="cw-bottom-list">
+          <div class="cw-list-item">2022 / - 复杂探针产品体验设计治理</div>
+          <div class="cw-list-item">2023 / - 构建 DesignSystem 的色彩科学</div>
+          <div class="cw-list-item">2025 / - AI时代的设计组件库</div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Footer with parallax effect -->
+      <footer class="footer">
+        <div class="footer-content container">
+          <div class="footer-top">
+            <div>
+              <strong>Contact</strong>
+              <a href="mailto:w2415550600@gmail.com">w2415550600@gmail.com</a>
+            </div>
+            <div>
+              <strong>Location</strong>
+              <span>Chengdu</span>
+            </div>
+            <div>
+              <strong>Resume</strong>
+              <a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf">Jianyu Wang ↓</a>
+            </div>
+            <div>
+              <strong>Socials</strong>
+              <a href="#">Zcool</a>
+              <a href="#">Dribbble</a>
+              <a href="#">Behance</a>
+            </div>
+          </div>
+          <div class="footer-giant">
+            <div><a href="work.html" class="footer-link"><span class="text-inner">Work.</span></a></div>
+            <div><a href="playground.html" class="footer-link"><span class="text-inner">Sandbox.</span></a></div>
+            <div><a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf" class="footer-link"><span class="text-inner">Resume.</span></a></div>
+            <div><a href="about.html" class="footer-link"><span class="text-inner">About.</span></a></div>
+          </div>
+        </div>
+      </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="./lib/ring-carousel/ring-carousel.js?v=2"></script>
+  <!-- 动态数据渲染：从JSON加载Sandbox创意作品 -->
+  <script>
+  (async function() {
+    try {
+      const res = await fetch('./data/sandbox.json');
+      const items = await res.json();
+      const grid = document.getElementById('sandbox-grid');
+      if (!grid || !items.length) return;
+
+      grid.innerHTML = items.map((item, idx) => {
+        const badgeNum = String(idx + 1).padStart(3, '0');
+        return `<div class="cw-item"><div class="cw-img-wrap" style="aspect-ratio:${item.aspectRatio || '221/166'}"><img src="${item.src}" alt="${item.alt}" loading="lazy"></div><span class="cw-badge" data-badge="${badgeNum}">${badgeNum}</span></div>`;
+      }).join('');
+      // 角标动画在数据加载完成后触发
+      if (typeof window.initBadgeAnimation === 'function') window.initBadgeAnimation();
+    } catch (e) {
+      console.warn('加载Sandbox数据失败:', e);
+    }
+  })();
+  </script>
+  <script src="./main.js"></script>
+  <script src="./playground.js"></script>
+</body>
+</html>
