@@ -1116,7 +1116,11 @@ body.page-about .section-divider {
     padding-right: 40px;
   }
 
-  /* Footer */
+  /* Footer - reduce top padding on mobile */
+  .footer-content {
+    padding-top: 48px;
+  }
+
   .footer-giant {
     font-size: 48px;
   }
