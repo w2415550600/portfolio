@@ -404,7 +404,7 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 0.5,
         ease: 'power2.in',
         onComplete: () => {
-          window.location.href = 'detail.html';
+          window.location.href = '/detail';
         }
       });
     });

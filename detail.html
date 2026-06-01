@@ -42,19 +42,19 @@
 <body class="page-detail">
   <!-- Navigation -->
   <nav class="nav container">
-    <a href="work.html" class="logo">Jianyu Wang</a>
+    <a href="/work" class="logo">Jianyu Wang</a>
     <div class="nav-links">
-      <a href="work.html">Work</a>
-      <a href="playground.html">Sandbox</a>
+      <a href="/work">Work</a>
+      <a href="/sandbox">Sandbox</a>
       <a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf" class="resume-btn">Resume ↓</a>
-      <a href="about.html">About</a>
+      <a href="/about">About</a>
     </div>
   </nav>
 
   <main class="container">
     <!-- 返回链接 -->
     <div style="padding-top: 20px;">
-      <a href="work.html" class="back-link">← 返回作品列表</a>
+      <a href="/work" class="back-link">← 返回作品列表</a>
     </div>
 
     <div id="detail-content">
@@ -86,10 +86,10 @@
         </div>
       </div>
       <div class="footer-giant">
-        <div><a href="work.html" class="footer-link"><span class="text-inner">Work.</span></a></div>
-        <div><a href="playground.html" class="footer-link"><span class="text-inner">Sandbox.</span></a></div>
+        <div><a href="/work" class="footer-link"><span class="text-inner">Work.</span></a></div>
+        <div><a href="/sandbox" class="footer-link"><span class="text-inner">Sandbox.</span></a></div>
         <div><a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf" class="footer-link"><span class="text-inner">Resume.</span></a></div>
-        <div><a href="about.html" class="footer-link"><span class="text-inner">About.</span></a></div>
+        <div><a href="/about" class="footer-link"><span class="text-inner">About.</span></a></div>
       </div>
     </div>
   </footer>
@@ -105,7 +105,7 @@
 
     if (!workId) {
       document.getElementById('detail-content').innerHTML =
-        '<div class="detail-not-found">未指定作品ID，<a href="work.html">返回作品列表</a></div>';
+        '<div class="detail-not-found">未指定作品ID，<a href="/work">返回作品列表</a></div>';
       return;
     }
 
@@ -116,7 +116,7 @@
 
       if (!work) {
         document.getElementById('detail-content').innerHTML =
-          '<div class="detail-not-found">作品不存在，<a href="work.html">返回作品列表</a></div>';
+          '<div class="detail-not-found">作品不存在，<a href="/work">返回作品列表</a></div>';
         return;
       }
 
@@ -202,7 +202,7 @@
     } catch (e) {
       console.error('加载作品详情失败:', e);
       document.getElementById('detail-content').innerHTML =
-        '<div class="detail-not-found">加载失败，<a href="work.html">返回作品列表</a></div>';
+        '<div class="detail-not-found">加载失败，<a href="/work">返回作品列表</a></div>';
     }
   })();
   </script>

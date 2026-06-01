@@ -1,6 +1,16 @@
 {
+  "rewrites": [
+    { "source": "/work", "destination": "/work.html" },
+    { "source": "/sandbox", "destination": "/playground.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/detail", "destination": "/detail.html" }
+  ],
   "redirects": [
-    { "source": "/", "destination": "/work.html", "permanent": false }
+    { "source": "/", "destination": "/work", "permanent": false },
+    { "source": "/work.html", "destination": "/work", "permanent": true },
+    { "source": "/playground.html", "destination": "/sandbox", "permanent": true },
+    { "source": "/about.html", "destination": "/about", "permanent": true },
+    { "source": "/detail.html", "destination": "/detail", "permanent": true }
   ],
   "headers": [
     {
