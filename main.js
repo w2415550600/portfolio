@@ -427,24 +427,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerContent = document.querySelector('.footer-content');
 
   if (footerEl && footerContent) {
-    // 文字层从"世界绝对位置"开始，初始在footer可见区域上方（被裁剪不可见）
-    // 滚动过程中逐渐进入黑色蒙版的可见区域，到结束时到达自然位置
-    // 注意：fromTo的from值必须是即时计算值，不能用函数（GSAP 3.12的from不支持函数值）
-    const footerStartY = -(window.innerHeight - 320);  // 初始偏移：视口高度减去320px位移
-    gsap.fromTo(footerContent,
-      { y: footerStartY },                         // 初始：在footer可见区上方，被裁剪（位移320px）
-      {
-        y: 0,                                      // 结束：到达自然位置
-        ease: 'none',
-        scrollTrigger: {
-          trigger: footerEl,
-          start: 'top bottom',                    // footer顶部到达视口底部时开始
-          end: 'top top',                         // footer顶部到达视口顶部时结束
-          scrub: true,                            // 与滚动同步
-          invalidateOnRefresh: true,              // 窗口resize时重新计算
+    // 移动端跳过视差动画，桌面端保持原效果
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile) {
+      const footerStartY = -(window.innerHeight - 320);
+      gsap.fromTo(footerContent,
+        { y: footerStartY },
+        {
+          y: 0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: footerEl,
+            start: 'top bottom',
+            end: 'top top',
+            scrub: true,
+            invalidateOnRefresh: true,
+          }
         }
-      }
-    );
+      );
+    }
   }
 
   // ========================================

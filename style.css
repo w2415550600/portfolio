@@ -1116,9 +1116,15 @@ body.page-about .section-divider {
     padding-right: 40px;
   }
 
-  /* Footer - reduce top padding on mobile */
+  /* Footer - mobile: no parallax, compact spacing */
+  .footer {
+    height: auto;
+    overflow: visible;
+  }
+
   .footer-content {
     padding-top: 48px;
+    padding-bottom: 24px;
   }
 
   .footer-giant {
