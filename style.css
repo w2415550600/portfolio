@@ -1024,3 +1024,289 @@ body.page-about .section-divider {
     gap: 16px;
   }
 }
+
+/* ==================================
+   Mobile Responsive (max-width: 768px)
+   ================================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Navigation - shrink text, no wrap */
+  .nav .logo {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    gap: 16px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-links a,
+  .nav-links .resume-btn {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: 60px;
+  }
+
+  .hero-meta {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+  }
+
+  .section-divider {
+    font-size: 14px;
+  }
+
+  /* Projects grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 40px 0;
+  }
+
+  .project-card.span-2 {
+    grid-column: span 1;
+  }
+
+  .project-info h3 {
+    font-size: 18px;
+  }
+
+  /* Experience */
+  .exp-top {
+    font-size: 18px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .exp-title {
+    width: auto;
+  }
+
+  .exp-content {
+    margin-left: 0;
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  .experience-section {
+    padding-bottom: 60px;
+  }
+
+  /* Marquee */
+  .marquee-section {
+    margin-top: 60px;
+  }
+
+  .marquee-group {
+    gap: 40px;
+    padding-right: 40px;
+  }
+
+  /* Footer */
+  .footer-giant {
+    font-size: 48px;
+  }
+
+  .footer-top {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    font-size: 11px;
+  }
+
+  .footer-top a,
+  .footer-top span {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .footer-top strong {
+    font-size: 11px;
+  }
+
+  /* Prevent Resume link from wrapping */
+  .footer-top div {
+    min-width: 0;
+  }
+
+  /* About page */
+  .about-hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .about-intro {
+    font-size: 18px;
+    margin-left: 0;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .about-portrait {
+    margin-bottom: 40px;
+  }
+
+  .about-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 40px 0;
+  }
+
+  .about-row-title {
+    font-size: 28px;
+  }
+
+  .about-row-desc {
+    font-size: 14px;
+    gap: 16px;
+  }
+
+  /* Playground / Sandbox page */
+  .pg-basic-info {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pg-basic-info .pg-introduce {
+    max-width: 100%;
+  }
+
+  .pg-basic-info .pg-title {
+    font-size: 20px;
+    margin: 8px 0 16px;
+  }
+
+  .pg-basic-info .pg-desc {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .pg-basic-info .pg-meta {
+    font-size: 12px;
+  }
+
+  .pg-divider {
+    margin: 30px 0;
+  }
+
+  #ring-container {
+    height: 400px;
+  }
+
+  /* Creative work grid */
+  .cw-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 40px 8px;
+  }
+
+  .cw-title {
+    font-size: 18px;
+  }
+
+  /* CW bottom text */
+  .page-playground .cw-bottom.container {
+    padding-right: 16px !important;
+  }
+
+  .cw-bottom-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .cw-bottom-row + .cw-bottom-row {
+    padding-top: 40px;
+  }
+
+  .cw-bottom-cols {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Detail page */
+  .basic-info-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .basic-info-right {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .introduce-title {
+    font-size: 20px;
+  }
+
+  .page-detail .work-detail {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+}
+
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .nav .logo {
+    font-size: 12px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a,
+  .nav-links .resume-btn {
+    font-size: 10px;
+  }
+
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .footer-giant {
+    font-size: 36px;
+  }
+
+  .footer-top {
+    font-size: 10px;
+    gap: 12px 16px;
+  }
+
+  .footer-top a,
+  .footer-top span {
+    font-size: 10px;
+  }
+
+  .footer-top strong {
+    font-size: 10px;
+  }
+
+  .about-intro {
+    font-size: 16px;
+  }
+
+  .about-row-title {
+    font-size: 22px;
+  }
+
+  .exp-content {
+    font-size: 20px;
+  }
+
+  #ring-container {
+    height: 320px;
+  }
+}
