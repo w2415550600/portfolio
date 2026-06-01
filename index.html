@@ -1,11 +1,175 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0;url=/work">
-  <title>王建宇作品集</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-  <p>正在跳转到 <a href="/work">Work</a>...</p>
+
+<body class="page-work">
+  <nav class="nav container">
+    <a href="/work" class="logo">Jianyu Wang</a>
+    <div class="nav-links">
+      <a href="/work">Work</a>
+      <a href="/sandbox">Sandbox</a>
+      <a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf" class="resume-btn">Resume ↓</a>
+      <a href="/about">About</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero container">
+      <div class="hero-meta g-fade-up">
+        Current: Qianxin Group-UED<br>
+        Role: UIUX Designer
+      </div>
+      <h1 class="hero-title g-fade-up">
+        <span class="text-black">Jianyu</span> <span class="text-gray">是一名</span> <span class="text-black">UIUX
+          设计师</span><span class="text-gray">/设计专家/视觉设计师。</span><br>
+        <span class="text-gray">他聚焦在产品体验、品牌&创意、设计系统&业务组件等领域。</span><br>
+        <span class="text-gray">将UIUX、品牌、3D 视觉、动态设计无缝衔接，创造持久品质的设计。</span>
+      </h1>
+      <div class="section-divider work-divider g-fade-up">
+        <div>Selected work</div>
+        <div>2020 - Present</div>
+      </div>
+    </section>
+
+    <!-- Grid Section — 由JSON数据动态渲染 -->
+    <section class="projects-grid container" id="works-grid">
+      <!-- JS动态填充 -->
+    </section>
+
+    <!-- Experience Note -->
+    <section class="container experience-section">
+      <div class="exp-top g-fade-up">
+        <div class="exp-title">Experience</div>
+        <div class="exp-link">Discover more</div>
+      </div>
+      <div class="exp-content words-stagger" data-text="过往经历包括奇安信集团，KNONSEC。服务客户包含微软，腾讯，小米，360集团等。现居住在成都，欢迎随时打招呼。">
+      </div>
+
+      <!-- Logo Marquee -->
+      <div class="marquee-section g-fade-up">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <div class="marquee-item"><img src="./logo/奇安信.svg" alt="奇安信"></div>
+            <div class="marquee-item"><img src="./logo/知道创宇.png" alt="知道创宇"></div>
+            <div class="marquee-item"><img src="./logo/微软.svg" alt="微软"></div>
+            <div class="marquee-item"><img src="./logo/腾讯.svg" alt="腾讯"></div>
+            <div class="marquee-item"><img src="./logo/小米.svg" alt="小米"></div>
+            <div class="marquee-item"><img src="./logo/360.svg" alt="360"></div>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <div class="marquee-item"><img src="./logo/奇安信.svg" alt="奇安信"></div>
+            <div class="marquee-item"><img src="./logo/知道创宇.png" alt="知道创宇"></div>
+            <div class="marquee-item"><img src="./logo/微软.svg" alt="微软"></div>
+            <div class="marquee-item"><img src="./logo/腾讯.svg" alt="腾讯"></div>
+            <div class="marquee-item"><img src="./logo/小米.svg" alt="小米"></div>
+            <div class="marquee-item"><img src="./logo/360.svg" alt="360"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-top">
+        <div>
+          <strong>Contact</strong>
+          <a href="mailto:w2415550600@gmail.com">w2415550600@gmail.com</a>
+        </div>
+        <div>
+          <strong>Location</strong>
+          <span>Chengdu</span>
+        </div>
+        <div>
+          <strong>Resume</strong>
+          <a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf">Jianyu Wang ↓</a>
+        </div>
+        <div>
+          <strong>Socials</strong>
+          <a href="https://www.zcool.com.cn/u/15153951" target="_blank">Zcool</a>
+          <a href="https://dribbble.com/Beitou-Studio" target="_blank">Dribbble</a>
+          <a href="#">Behance</a>
+        </div>
+      </div>
+          <div class="footer-giant">
+            <div><a href="/work" class="footer-link"><span class="text-inner">Work.</span></a></div>
+            <div><a href="/sandbox" class="footer-link"><span class="text-inner">Sandbox.</span></a></div>
+            <div><a href="assets/resume.pdf" download="Jianyu_Wang_Resume.pdf" class="footer-link"><span class="text-inner">Resume.</span></a></div>
+            <div><a href="/about" class="footer-link"><span class="text-inner">About.</span></a></div>
+          </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <!-- 动态数据渲染：从JSON加载作品列表 -->
+  <script>
+  (async function() {
+    try {
+      const res = await fetch('./data/works.json');
+      const works = await res.json();
+      const grid = document.getElementById('works-grid');
+      if (!grid || !works.length) return;
+
+      // 按sortOrder排序
+      works.sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+
+      grid.innerHTML = works.map(work => {
+        const spanClass = work.span === 2 ? 'span-2' : '';
+        const mediaTag = work.coverType === 'video'
+          ? `<video src="${work.cover}" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video>`
+          : work.cover
+            ? `<img src="${work.cover}" alt="${work.title}">`
+            : `<div style="width:100%;height:100%;background:#D8D8D8;"></div>`;
+
+        // 特殊处理：size-910x672 且 span-2 的卡片需要 grid-row: span 2
+        const extraStyle = work.ratio === 'size-910x672' && work.span === 2
+          ? ' style="grid-row: span 2;"' : '';
+        const wrapperExtraStyle = work.ratio === 'size-910x672' && work.span === 2
+          ? ' style="height: 100%;"' : '';
+        const mediaExtraStyle = work.ratio === 'size-910x672' && work.span === 2
+          ? ' style="height:100%;object-fit:cover;"' : '';
+
+        // 重新生成mediaTag以包含extra styles
+        let finalMediaTag;
+        if (work.coverType === 'video') {
+          finalMediaTag = `<video src="${work.cover}" muted playsinline${mediaExtraStyle ? ' style="width:100%;height:100%;object-fit:cover;' + (work.ratio === 'size-910x672' ? 'height:100%;object-fit:cover;' : '') + '"' : ''}></video>`;
+        } else if (work.cover) {
+          finalMediaTag = `<img src="${work.cover}" alt="${work.title}"${mediaExtraStyle}>`;
+        } else {
+          finalMediaTag = `<div style="width:100%;height:100%;background:#D8D8D8;"></div>`;
+        }
+
+        return `
+          <a href="detail.html?id=${work.id}" class="project-card ${spanClass} g-fade-up" data-id="${work.id}"${extraStyle} style="text-decoration:none;color:inherit;">
+            <div class="project-img-wrapper ${work.ratio || 'size-small'}"${wrapperExtraStyle}>
+              ${finalMediaTag}
+            </div>
+            <div class="project-info">
+              <h3>${work.title}</h3>
+              <p>${work.time || ''}&nbsp;&nbsp;&nbsp;Type: ${work.type || ''}</p>
+            </div>
+          </a>`;
+      }).join('');
+
+      // 触发GSAP动画（等待main.js执行完毕后）
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        // 重新注册ScrollTrigger（如果main.js还没执行）
+      }
+    } catch (e) {
+      console.warn('加载作品数据失败:', e);
+    }
+  })();
+  </script>
+  <script src="./main.js"></script>
 </body>
+
 </html>
