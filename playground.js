@@ -50,16 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 初始化 RingCarousel
+  // 移动端缩小参数
+  const isMobile = window.innerWidth <= 768;
   const carousel = new RingCarousel('#ring-container', {
     data: cardData,
-    radius: 445,
+    radius: isMobile ? 200 : 445,
     speed: 0.40,
-    tilt: 22,
+    tilt: isMobile ? 30 : 22,
     cardRotate: 90,
     autoSpeed: 0.08,
-    cardWidth: 120,
-    cardHeight: 160,
+    cardWidth: isMobile ? 64 : 120,
+    cardHeight: isMobile ? 86 : 160,
     accent: '#4a90d9',
   });
 
