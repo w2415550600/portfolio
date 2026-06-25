@@ -1,0 +1,26 @@
+{
+  "name": "jianyu-portfolio",
+  "version": "1.0.0",
+  "description": "Jianyu Wang's Portfolio - UIUX Designer Portfolio Website",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w2415550600/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w2415550600/portfolio/issues"
+  },
+  "homepage": "https://github.com/w2415550600/portfolio#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
