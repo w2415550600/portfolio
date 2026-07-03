@@ -2,7 +2,7 @@
   {
     "id": "qianxin-qaxgpt-experience",
     "title": "QAXGPT Experience",
-    "cover": "./assets/creativework/cw-01.png",
+    "cover": "./assets/works/封面.png",
     "coverType": "image",
     "time": "2024-2025",
     "type": "Website",
@@ -10,10 +10,10 @@
     "span": 2,
     "sortOrder": 1,
     "detail": {
-      "category": "Creative",
-      "date": "May, 2025",
-      "intro": "",
-      "role": "",
+      "category": "Experience",
+      "date": "March, 2025",
+      "intro": "OAX-GRT Security Robot is an intelligent agent platform developed by its king, OAX-GFT Security Large Model Technology, specifically designed for cybersecurity professionals to provide a one-stop intelligent agent application creation and management service. Its core capabilities rely on the intelligent base of the large model, supporting RAG (Retrieval-Augmented Generation) and workflow orchestration, and can be extended to integrate third-party large models. At the application layer platform, by integrating business data and collaborating with various production lines, intelligent agents are distributed to actual business scenarios, realizing the product's AI-based implementation.",
+      "role": "UX/UI Design | Branding | Rearch",
       "content": []
     }
   },
@@ -123,6 +123,81 @@
       "intro": "",
       "role": "",
       "content": []
+    }
+  },
+  {
+    "id": "work-1782370745032",
+    "title": "ZoomEye BE  Experience ",
+    "cover": "./assets/works/内容封面图-11.png",
+    "coverType": "image",
+    "time": "2020-2021",
+    "type": "web",
+    "ratio": "size-small",
+    "span": 1,
+    "sortOrder": 6,
+    "detail": {
+      "category": "Creative",
+      "date": "May 2021",
+      "intro": "This product is the first project from O that I have worked on since joining the company, and like many B-end products, its functional architecture has gradually evolved with the development of the business. In past versions, we have always focused on product performance, but at this stage, the functionality and usability of the product have caught up with competitors, so we need to think more about the user experience.",
+      "role": "UX UI Design / Brand design",
+      "content": [
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-11.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-10.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-09.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-08.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-3.gif"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-07.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-06.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-05.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-04.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-03.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-02.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-2.gif"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-01.png"
+        },
+        {
+          "type": "image",
+          "src": "./assets/works/detail/内容封面图-1.gif"
+        }
+      ]
     }
   }
 ]

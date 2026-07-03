@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 给克隆导航中的链接绑定同样的行为
     fixedNav.querySelectorAll('a').forEach(a => {
       const href = a.getAttribute('href');
-      if (href && href !== '#') {
+      if (href && href !== '#' && !href.startsWith('mailto:') && !href.startsWith('http')) {
         a.addEventListener('click', (e) => {
           e.preventDefault();
           gsap.to('body', {
@@ -399,12 +399,15 @@ document.addEventListener("DOMContentLoaded", () => {
   projectCards.forEach(card => {
     card.addEventListener('click', (e) => {
       e.preventDefault();
+      const href = card.getAttribute('href');
       gsap.to('body', {
         opacity: 0,
         duration: 0.5,
         ease: 'power2.in',
         onComplete: () => {
-          window.location.href = '/detail';
+          if (href) {
+            window.location.href = href;
+          }
         }
       });
     });
